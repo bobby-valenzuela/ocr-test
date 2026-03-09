@@ -11,7 +11,6 @@ uv_start(){
     #    - Installs uv into ~/.cargo/bin or ~/.local/bin (depending on your system)
     command -v uv >/dev/null 2>&1 || curl -LsSf https://astral.sh/uv/install.sh | sh
     [ -f "$HOME/.local/bin/env" ] && . "$HOME/.local/bin/env"
-    command -v uv >/dev/null 2>&1 || alias uv="$HOME/.local/bin/uv"
 
 
     # 2. Creates a new Python project in the current directory
@@ -67,4 +66,5 @@ uv_start(){
 
 uv_start
 
-pwd
+echo 'If you get "uv not found" just source your env with "source "$HOME/.local/bin/env" '
+
