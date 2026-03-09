@@ -1,9 +1,14 @@
+#!/usr/bin/env bash
+git clone https://github.com/bobby-valenzuela/ocr-test.git
+cd ocr-test/
+
 uv_start(){
     # 1. Downloads and runs the official uv installation script from Astral
     #    - -L = follow redirects, -s = silent, -S = show errors if any, -f = fail silently on server errors
     #    - This is the recommended one-liner way to install uv (Rust-based, very fast Python tool)
     #    - Installs uv into ~/.cargo/bin or ~/.local/bin (depending on your system)
-    curl -LsSf https://astral.sh/uv/install.sh | sh
+    command -v uv >/dev/null 2>&1 || curl -LsSf https://astral.sh/uv/install.sh | sh
+    [ -f "$HOME/.local/bin/env" ] && . "$HOME/.local/bin/env"
 
     # 2. Creates a new Python project in the current directory
     #    - Generates a minimal pyproject.toml with modern metadata ([project], [build-system])
@@ -47,7 +52,7 @@ uv_start(){
     echo "| \$: uv add numpy                                                        |"
     echo "|                                                                        |"
     echo "| # Running programs                                                     |"
-    echo "| \$: uv run python app.py                                                |"
+    echo "| \$: uv run python check_voltages.py                                                |"
     echo " ────────────────────────────────────────────────────────────────────────"
     printf "\n\n"
 
