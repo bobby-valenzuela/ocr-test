@@ -11,6 +11,8 @@ uv_start(){
     #    - Installs uv into ~/.cargo/bin or ~/.local/bin (depending on your system)
     command -v uv >/dev/null 2>&1 || curl -LsSf https://astral.sh/uv/install.sh | sh
     [ -f "$HOME/.local/bin/env" ] && . "$HOME/.local/bin/env"
+    command -v uv >/dev/null 2>&1 || alias uv="$HOME/.local/bin/uv"
+
 
     # 2. Creates a new Python project in the current directory
     #    - Generates a minimal pyproject.toml with modern metadata ([project], [build-system])
@@ -51,18 +53,17 @@ uv_start(){
     echo "| Virtual Environment Setup and Synced!                                  |"
     echo "|                                                                        |"
     echo "| # Adding packages                                                      |"
-    echo "| \$: uv add numpy                                                        |"
+    echo "| \$: uv add numpy                                                       |"
+    echo "|                                                                        |"
     echo "|                                                                        |"
     echo "| # Running programs    (try this one now!)                              |"
+    echo "| \$: cd ocr-test/                                                       |" # First enter the dir
     echo "| \$: uv run python check_voltages.py                                    |"
     echo " ────────────────────────────────────────────────────────────────────────"
     printf "\n\n"
 
 
-
-
 }
 
 uv_start
-pwd
-ocr-test/
+
