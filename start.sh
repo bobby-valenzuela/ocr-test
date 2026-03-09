@@ -2,6 +2,8 @@
 git clone https://github.com/bobby-valenzuela/ocr-test.git
 cd ocr-test/
 
+sudo apt install tesseract-ocr -y          # base + English
+
 uv_start(){
     # 1. Downloads and runs the official uv installation script from Astral
     #    - -L = follow redirects, -s = silent, -S = show errors if any, -f = fail silently on server errors
@@ -55,6 +57,8 @@ uv_start(){
     echo "| \$: uv run python check_voltages.py                                                |"
     echo " ────────────────────────────────────────────────────────────────────────"
     printf "\n\n"
+
+    cd ocr-test/
 
 
 }
