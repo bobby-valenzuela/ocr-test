@@ -67,3 +67,4 @@ uv_start(){
 
 uv_start
 
+pwd
