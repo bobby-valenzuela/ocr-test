@@ -3,7 +3,7 @@ uv_start(){
     #    - -L = follow redirects, -s = silent, -S = show errors if any, -f = fail silently on server errors
     #    - This is the recommended one-liner way to install uv (Rust-based, very fast Python tool)
     #    - Installs uv into ~/.cargo/bin or ~/.local/bin (depending on your system)
-    # curl -LsSf https://astral.sh/uv/install.sh | sh
+    curl -LsSf https://astral.sh/uv/install.sh | sh
 
     # 2. Creates a new Python project in the current directory
     #    - Generates a minimal pyproject.toml with modern metadata ([project], [build-system])
