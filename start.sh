@@ -53,14 +53,16 @@ uv_start(){
     echo "| # Adding packages                                                      |"
     echo "| \$: uv add numpy                                                        |"
     echo "|                                                                        |"
-    echo "| # Running programs                                                     |"
-    echo "| \$: uv run python check_voltages.py                                                |"
+    echo "| # Running programs    (try this one now!)                              |"
+    echo "| \$: uv run python check_voltages.py                                    |"
     echo " ────────────────────────────────────────────────────────────────────────"
     printf "\n\n"
 
-    cd ocr-test/
+
 
 
 }
 
 uv_start
+pwd
+ocr-test/
